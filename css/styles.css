@@ -116,8 +116,15 @@ body{
 
 .slogan {
     background: var(--main-text-color, #2E2F42);
+    width: 1440px;
+    margin: 0 auto;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/slogan-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-grow: 1;
 }
 .slogan-title {
     font-weight: 700;
@@ -259,8 +266,11 @@ body{
     justify-content: space-between;
 }
 .team-item {
-    width: calc(100% - 48 / 3);
+    width: 100%;
     margin-right: 24px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
+    0px 1px 1px rgba(46, 47, 66, 0.16), 
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-item:nth-child(4n) {
     margin-right: 0;
@@ -311,36 +321,6 @@ body{
 .team-soc-link:is(:hover, :focus) {
     background-color: #404BBF;
 }
-/*-------------FOOTER-------------*/
-
-.footer {
-    background: var(--main-text-color, #2E2F42);
-    padding: 100px 0;
-    
-}
-.footer-logo-link {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: var(--typical-lh);
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--accent-color, #4D5AE5);
-    margin-bottom: 16px;
-}
-.footer-accent-logo{
-    color: #F4F4FD;
-}
-.footer-desc {
-    font-size: 16px;
-    line-height: var(--typical-lh);
-    letter-spacing: 0.02em;
-    color: #E7E9FC;
-    width: 264px;
-}
 
 /*-------------CUSTOMERS-------------*/
 
@@ -377,10 +357,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    color: #8E8F99;
 }
 .customers-icon {
-    
+    fill: currentColor;    
 }
 .customers-icon-link:is(:hover, :focus) {
     border-color: #404BBF;
@@ -389,13 +369,83 @@ body{
     fill: #404BBF;
 }
 
+/*-------------FOOTER-------------*/
+
+.footer {
+    background: var(--main-text-color, #2E2F42);
+    padding: 100px 0;
+}
+.footer-wrap {
+    display: flex;
+    align-items: top;
+}
+.footer-text {
+    margin-right: 120px;
+}
+.footer-logo-link {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: var(--typical-lh);
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent-color, #4D5AE5);
+    margin-bottom: 16px;
+}
+.footer-accent-logo{
+    color: #F4F4FD;
+}
+.footer-desc {
+    font-size: 16px;
+    line-height: var(--typical-lh);
+    letter-spacing: 0.02em;
+    color: #E7E9FC;
+    width: 264px;
+}
+.footer-soc {
+
+}
+.footer-soc-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: var(--typical-lh);
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.footer-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.footer-soc-item {
+    width: 40px;
+    height: 40px;
+}
+.footer-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4fd2a;
+}
+.footer-soc-icon {
+    fill: #F4F4FD;
+}
+.footer-soc-link:is(:hover, :focus) {
+    background-color: #31D0AA;
+}
+
 /*-------------PORTFOLIO-------------*/
 
 .portfolio {
     padding-top: 96px;
     padding-bottom: 120px;
-}
-.visually-hidden {
 }
 .portfolio-filter-list {
     display: flex;
@@ -403,8 +453,13 @@ body{
     justify-content: center;
     margin-bottom: 72px;   
 }
-.portfolio-filter-item {
-
+.portfolio-filter-item { 
+    border-radius: 4px;
+}
+.portfolio-filter-item:is(:hover, :focus) {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portfolio-filter-btn {
     font-family: inherit;
@@ -437,7 +492,10 @@ body{
 .portfolio-projects-item {
     border-width: 0 0 0.5px 0;
     border-style: solid;
-    border-color: #F4F4FD;
+    border-color: #E7E9FC;
+}
+.portfolio-projects-item:is(:hover, :focus) {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-projects-link {
 
